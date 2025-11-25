@@ -1,0 +1,3 @@
+SELECT (AVG(energy) + AVG(valence) +  AVG(danceability)) / 3 AS overall_average FROM songs;
+i would say this person has very little aura, since its average of energy, valence and danceability are realatively low.
+A bettter way to analize this person's aura would be literally account for the kind of music he listens.

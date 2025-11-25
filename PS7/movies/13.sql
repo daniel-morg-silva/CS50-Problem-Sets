@@ -1,0 +1,1 @@
+SELECT p.name FROM people AS p JOIN people AS p1, stars AS s, stars AS s1, movies ON p.id = s.person_id AND p1.id = s1.person_id AND s1.movie_id = movies.id AND s1.movie_id = s.movie_id WHERE p1.name = 'Kevin Bacon' AND p1.birth = 1958 AND p.name != 'Kevin Bacon';

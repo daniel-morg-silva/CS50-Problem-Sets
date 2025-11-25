@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>
+                    How much money do I have in my wallet?
+                </h3>
+                <p id="feedback1"></p>
+                <button type="submit" class="incorrect" class="question1">1€</button>
+                <button type="submit" class="incorrect" class="question1">5€</button>
+                <button type="submit" class="incorrect" class="question1">15€</button>
+                <button type="submit" class="correct" class="question1">20€</button>
+                <button type="submit" class="incorrect" class="question1">100€</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>How many golden boots does Cristiano Ronaldo have?</h3>
+                <p id="feedback2"></p>
+                <form>
+                    <input type="text" id="response" name="response" placeholder="Type your answer here">
+                    <button type="submit" id="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function()
+            {
+                // correct Option
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function()
+                {
+                    document.getElementById("feedback1").innerHTML = "Correct!";
+                    correct.style.backgroundColor = "green";
+                    document.querySelectorAll(".question1").forEach(button =>
+                        {
+                            button.disabled = true;
+                        })
+                })
+
+                // Incorrect Option
+                let incorrect = document.querySelectorAll('.incorrect');
+                incorrect.forEach(button =>
+                {
+                    button.addEventListener('click', function()
+                    {
+                        document.getElementById("feedback1").innerHTML = "Incorrect!";
+                        button.style.backgroundColor = "red";
+                        document.querySelectorAll(".question1").forEach(button =>
+                        {
+                            button.disabled = true;
+                        })
+                    })
+                })
+            })
+        </script>
+        <script>
+                // document.getElementById("submit").addEventListener("click", function(event) {
+                //     event.preventDefault();
+
+                //     if (document.getElementById("response").value == "7") {
+                //         document.querySelector("#info2").innerHTML = "Correct!";
+                //         document.querySelector("input").style.backgroundColor = "green";
+                //     }
+                //     else {
+                //         document.querySelector("#info2").innerHTML = "Incorrect";
+                //         document.querySelector("input").style.backgroundColor = "red";
+                //     }
+                // })
+        </script>
+    </body>
+
+</html>
