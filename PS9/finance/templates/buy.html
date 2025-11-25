@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+    <form action="/buy" method="post">
+        <input name="symbol" required autofocus class="form-control mx-auto w-auto mb-3" placeholder="Stock Symbol" type="text">
+        <input name="shares" required class="form-control mx-auto w-auto mb-3" placeholder="N. Shares" type="text">
+        <button type="submit" class="btn btn-primary mb-3">Submit</button>
+    </form>
+
+    <div id="stock_result" class="mt-3"></div>
+
+    <script>
+        let input = document.querySelector('input');
+
+        input.addEventListener('input', async function() {
+            let response = await fetch('/quote/' + input.value);
+            let stock = await response.json();
+
+            document.getElementById('stock_result').innerHTML = `
+
+                <strong>${stock.name} (${stock.symbol})</strong><br>
+                Current Price: ${stock.price | usd}
+            `;
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block main %}
+
+    <h3>Cash: {{ cash.cash | usd }}</h3>
+    <h3>Total Net Value: {{ cash.cash + sum}}</h3>
+
+    <table class="table table-md table-hover table-bordered">
+        <tr>
+            <th>Stock</th>
+            <th>N. Shares</th>
+            <th>Price/Stock</th>
+            <th>Total Value</th>
+        </tr>
+        {% for stock in holdings %}
+            <tr>
+                <td>{{ stock.stock }}</td>
+                <td>{{ stock.num_shares }}</td>
+                <td>{{ stock.stock_value | usd }}</td>
+                <td>{{ stock.total_value }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}
