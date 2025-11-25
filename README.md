@@ -4,15 +4,15 @@ This repository contains my solutions to the CS50 problem sets from Harvard's CS
 
 ## 📁 Problem Sets Included
 
-- **PS1**: [Mario, Cash, Credit]
-- **PS2**: [Readability, Caesar, Substitution]
+- **PS1**: [Me, World, Mario(less and more), Cash, Credit]
+- **PS2**: [Readability, Caesar, Substitution, Scrabble]
 - **PS3**: [Plurality, Runoff, Tideman]
-- **PS4**: [Filter, Recover]
-- **PS5**: [Speller]
-- **PS6**: [Hello in Python, Mario, Cash, Credit, Readability, DNA]
-- **PS7**: [Movies, Fiftyville]
-- **PS8**: [Homepage]
-- **PS9**: [Finance]
+- **PS4**: [Filter(less and more), Recover, Volume]
+- **PS5**: [Speller, Inheritance]
+- **PS6**: [Sentimental Hello, Sentimental Mario More, Sentimental Credit, Sentimental Readability, DNA]
+- **PS7**: [Movies, Fiftyville, Songs]
+- **PS8**: [Trivia, Homepage]
+- **PS9**: [Birthdays, Finance]
 
 ## 🚀 About CS50
 
